@@ -1,0 +1,45 @@
+// Example program
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class articulo{
+    private:
+    float costoBase;
+    public:
+    articulo(){
+        costoBase=0;}
+        
+    void setCostoBase(float a){
+        costoBase=a;
+        }
+    float getCostoBase(){
+        return costoBase;}
+    
+    float PVP(){
+        float aux;
+        aux=costoBase + costoBase*0.30;
+        return aux;
+        }
+    float PVM(){
+        float aux;
+        aux=costoBase + costoBase*0.15;
+        return aux;
+        }
+    };
+
+int main()
+{
+    articulo a1;
+    
+    a1.setCostoBase(1000);
+    cout<<a1.getCostoBase()<<endl;
+    cout<<a1.PVP()<<endl;
+    cout<<a1.PVM()<<endl;
+    
+    
+        
+  return 0;
+}
